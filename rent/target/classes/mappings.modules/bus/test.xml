@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rent.cmcc.modules.bus.dao.TestDao">
+    <sql id="testColumns">
+		a.id AS "id",
+		a.name AS "name"
+	</sql>
+    <sql id="testJoins">
+    </sql>
+    <select id="findByName" resultType="com.rent.cmcc.modules.bus.entity.Test">
+        SELECT
+        <include refid="testColumns"/>
+        FROM test a
+        <include refid="testJoins"/>
+        WHERE a.name = #{name}
+    </select>
+</mapper>
