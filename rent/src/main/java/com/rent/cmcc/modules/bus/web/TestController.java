@@ -17,6 +17,7 @@ public class TestController {
     public String find(){
         Test test = testService.findByName("test");
         System.out.println(test.getName());
+        System.out.println("shujianxiong");
         return "test";
     }
 }
