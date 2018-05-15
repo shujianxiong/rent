@@ -18,6 +18,7 @@ public class TestController {
         Test test = testService.findByName("test");
         System.out.println(test.getName());
         System.out.println("shujianxiong");
+        System.out.println("sourceTree");
         return "test";
     }
 }
